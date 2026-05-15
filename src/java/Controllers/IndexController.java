@@ -22,8 +22,11 @@ public class IndexController extends HttpServlet {
         
         switch (page){
             case "category": 
-                viewToLoad = "/WEB-INF/Views/Category.jsp";
-                break;
+                req.getRequestDispatcher("/CategoryServlet").forward(req, res);
+                return;
+            case "read": 
+                req.getRequestDispatcher("/ReadServlet").forward(req, res);
+                return;
             case "saved": 
                 viewToLoad = "/WEB-INF/Views/Saved.jsp";
                 break;

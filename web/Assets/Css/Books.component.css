@@ -1,7 +1,8 @@
 .book-card {
     color: var(--text-main);
     text-decoration: none;
-
+    display: flex;
+    flex-direction: column;
     width: 150px;
     height: 300px;
 
@@ -84,4 +85,8 @@
 .book-card-options {
     display: flex;
     justify-content: space-between;
+}
+
+.book-card-save {
+    width: 20px;
 }

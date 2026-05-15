@@ -1,0 +1,106 @@
+.category-article {
+    display: flex;
+    flex-direction: column;
+    flex: 2.5;
+    height: 100%;
+    padding: 1em;
+    overflow-y: auto;
+    background-color: var(--bg-body);
+}
+
+.category-header {
+    margin-bottom: 2em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1em;
+}
+
+.category-main-title {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.shelves-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    min-width: 900px;
+    max-width: 1000px;
+}
+
+.shelf-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.shelf-title-wrapper {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    padding: 0.5em 1.5em;
+    border: 2px solid var(--border-color);
+    border-radius: 4px 4px 0 0;
+    margin-bottom: -2px; /* Overlap the row slightly */
+    align-self: flex-start;
+    z-index: 10;
+}
+
+.shelf-title {
+    color: var(--bg-body);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.shelf-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1.5em;
+    overflow-x: auto;
+    padding: 1.5em 1em 1em 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid var(--border-color);
+    border-radius: 0 4px 4px 4px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-orange) transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    .shelf-row {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .shelf-title {
+        color: var(--text-main);
+    }
+}
+
+.shelf-item {
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.shelf-item:hover {
+    transform: translateY(-5px);
+}
+
+.shelf-board {
+    height: 15px;
+    background-color: var(--accent-yellow);
+    border: 2px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.empty-shelf-msg {
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+    color: var(--text-main);
+    opacity: 0.7;
+    font-style: italic;
+    font-size: 1.1rem;
+}

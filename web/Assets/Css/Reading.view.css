@@ -1,0 +1,173 @@
+.reading-article {
+    display: flex;
+    flex-direction: column;
+    flex: 2.5; /* Matches Main.jsp space since preview is hidden */
+    height: 100%;
+    background-color: var(--bg-body);
+    font-family: 'Cormorant', serif; /* A nice serif font for reading */
+}
+
+.reading-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+/* Sidebar / Índice */
+.reading-sidebar {
+    width: 280px;
+    background-color: var(--bg-card);
+    border-right: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1.5em;
+    overflow-y: auto;
+}
+
+.reading-sidebar-title {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 1em;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-orange);
+    padding-bottom: 0.5em;
+}
+
+.reading-toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.toc-link {
+    display: block;
+    padding: 0.8em 1em;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+    transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--border-color);
+}
+
+.toc-link.active {
+    background-color: var(--accent-yellow);
+    border-color: var(--border-color);
+    font-weight: bold;
+    box-shadow: 2px 2px 0px var(--border-color);
+}
+
+.toc-empty {
+    color: var(--text-main);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.back-btn {
+    margin-top: 2em;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+.btn-vintage {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    border: 2px solid var(--border-color);
+    padding: 0.8em 1em;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 3px 3px 0px var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.btn-vintage:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--border-color);
+    background-color: var(--accent-orange);
+}
+
+/* Main Reading Content */
+.reading-content-area {
+    flex: 1;
+    padding: 3em 5em;
+    overflow-y: auto;
+    background-color: var(--bg-body);
+}
+
+.reading-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.reading-book-title {
+    font-size: 3rem;
+    color: var(--text-main);
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.reading-book-author {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    opacity: 0.8;
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+.reading-divider {
+    height: 4px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--border-color),
+        var(--border-color) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    margin: 2em auto;
+    width: 60%;
+}
+
+.reading-section-title {
+    font-size: 2.2rem;
+    color: var(--text-main);
+    margin-bottom: 1em;
+}
+
+.reading-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    text-align: justify;
+}
+
+.reading-text p {
+    margin-bottom: 1.5em;
+}
+
+.reading-empty-state {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.reading-text-placeholder {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    text-align: justify;
+    margin-top: 2em;
+}
