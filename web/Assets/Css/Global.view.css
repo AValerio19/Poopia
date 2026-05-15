@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    transition: cubic-bezier(0.58, 0, 0.42, 1);
+}
+
+:root {
+    /* MODO CLARO */
+    --bg-body: #f2e8cf; /* Crema/Hueso vintage */
+    --bg-sidebar: #f2e8cf; /* Mismo que el body o ligeramente más oscuro */
+    --accent-yellow: #f2cc8f; /* El amarillo de la barra de búsqueda */
+    --accent-orange: #e07a5f; /* El naranja de los botones */
+    --text-main: #3d405b; /* Azul muy oscuro/Gris carbón para lectura */
+    --border-color: #3d405b; /* Bordes finos y definidos */
+    --bg-card: #fdf9f0; /* Un blanco papel para resaltar libros */
+    --bg-hover: #e8dcc4; /* Crema más oscuro para hovers */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* MODO OSCURO */
+        --bg-body: #1d1d1d; /* Negro mate profundo */
+        --bg-sidebar: #252525;
+        --accent-yellow: #d4a373; /* Amarillo mostaza apagado */
+        --accent-orange: #bc6c25; /* Naranja quemado */
+        --text-main: #f2e8cf; /* Texto crema (el fondo del modo claro) */
+        --border-color: #4a4a4a;
+        --bg-card: #2c2c2c; /* Gris muy oscuro para tarjetas */
+        --bg-hover: #333333;
+    }
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    color: var(--text-main);
+    background-color: var(--bg-body);
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.container-main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container-secondary {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+
+    flex: 2.5;
+    height: 100%;
+
+    padding: 1em;
+
+    overflow-y: auto;
+    scrollbar-width: none;
+}

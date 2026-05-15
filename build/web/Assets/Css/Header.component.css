@@ -1,0 +1,155 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+
+    height: 60px;
+}
+
+.header-left {
+    background: var(--accent-yellow);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex: 2.5;
+    height: 100%;
+    padding: 0 1em;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+}
+
+.search-form {
+    background: var(--bg-sidebar);
+    border: 2px solid var(--border-color);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 70%;
+}
+
+.icon-search {
+    padding: 5px;
+}
+
+.input-search {
+    border: none;
+    background: var(--bg-sidebar);
+    color: var(--text-main);
+    outline: none;
+
+    font-size: 1em;
+    font-weight: 400;
+
+    flex: 1;
+    height: 100%;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    flex: 1;
+    height: 100%;
+}
+
+.header-profile {
+    position: relative;
+
+    border: 1px solid var(--border-color);
+    background: var(--bg-sidebar);
+    color: var(--text-main);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+
+    flex: 1;
+    height: 100%;
+    padding: 1em;
+}
+
+.header-profile:focus {
+    background: var(--bg-body);
+    border: 2px solid var(--text-main);
+}
+
+.header-profile:focus .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    display: flex;
+
+    pointer-events: auto;
+}
+
+.profile-dropdown {
+    border: 2px solid var(--border-color);
+    background: var(--bg-body);
+
+    display: flex;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+}
+
+.profile-link {
+    color: var(--text-main);
+
+    display: block;
+
+    text-decoration: none;
+
+    padding: 1em;
+    width: 100%;
+}
+
+.header-notif {
+    border: 1px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 100%;
+}

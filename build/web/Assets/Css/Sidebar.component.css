@@ -1,0 +1,68 @@
+.sidebar-container {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+    width: 100px;
+
+    padding: 2em 1em;
+}
+
+.logo-container {
+    color: var(--text-main);
+    width: 100px;
+}
+
+.redirection-list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1em;
+}
+
+.redirection-link {
+    color: var(--text-main);
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-svg {
+    fill: rgba(255, 165, 0, 0);
+
+    transition:
+        fill 0.4s ease,
+        transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+}
+
+.icon-svg.active {
+    fill: var(--accent-orange);
+
+    transition:
+        fill 0.4s ease,
+        transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(1.1);
+}
+
+.redirection-link:hover .icon-svg.active {
+    fill: var(--text-main);
+
+    transform: scale(1.05);
+    stroke: var(--accent-orange);
+}
+
+.redirection-link:hover .icon-svg {
+    transform: scale(1.05);
+    stroke: var(--accent-orange);
+}
