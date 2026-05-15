@@ -34,8 +34,8 @@ public class IndexController extends HttpServlet {
                 viewToLoad = "/WEB-INF/Views/Downloaded.jsp";
                 break;
             case "discover": 
-                viewToLoad = "/WEB-INF/Views/Discover.jsp";
-                break;
+                req.getRequestDispatcher("/DiscoverServlet").forward(req, res);
+                return;
             case "login": 
                 viewToLoad = "/WEB-INF/Views/Login.jsp";
                 break;
