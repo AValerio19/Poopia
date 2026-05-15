@@ -20,6 +20,12 @@
 
     gap: 1em;
     flex: 1;
+
+    max-width: 900px;
+    padding: 0.5em 0;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-orange) var(--bg-body);
 }
 
 .materia-item {
@@ -33,6 +39,7 @@
     text-align: center;
 
     padding: 0.5em 1em;
+    width: max-content;
     height: 100%;
 
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
